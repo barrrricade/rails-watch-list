@@ -1,0 +1,14 @@
+<h1>Showing a list</h1>
+<h2>
+  <% @list.movies.each do |movie| %>
+    <h3><%= @list.name %></h3>
+    <p> <%= movie.title %> </p>
+    <br>
+    <p><%= link_to "Delete bookmark", bookmark_path(Bookmark.find_by(movie: movie, list: @list)), method: :delete %></p>
+  <% end %>
+</h2>
+
+
+<h4><%= link_to "create new bookmark", new_list_bookmark_path(@list) %></h4>
+
+<h4><%= link_to "Show all list", lists_path %></h4>
