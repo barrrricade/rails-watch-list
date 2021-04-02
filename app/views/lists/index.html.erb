@@ -1,4 +1,6 @@
+<div class="navbar"></div>
 <h1>Here's your list</h1>
+<div class="lists_banner"></div>
 
 <% @lists.each_with_index do |l, i| %>
 <h2> <%= "#{i+1}. " %><%= link_to l.name , list_path(l)  %></h2>
