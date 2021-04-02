@@ -1,0 +1,101 @@
+.lists_banner {
+  background-image: asset-url('banner.png');
+  background-repeat: no-repeat;
+  height: 350px;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  padding-top: 50px;
+  margin: 0;
+
+  position: relative;
+  text-align: center;
+}
+
+.footer{
+  position: absolute;
+  bottom: 0px;
+  background-image: asset-url('banner.png');
+  width: 100vw;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding-top: 50px;
+
+}
+
+.index-container {
+  background-color: #081825;
+  width: 100vw;
+  height: 1000px;
+  // height: 100vh;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+a {
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none;
+}
+
+.card-container{
+  display: grid;
+  grid-template-columns: 22% 22% 22%;
+
+  width: 100%;
+  justify-content: space-around;
+  padding: 50px;
+
+}
+
+.card {
+  background-image: asset-url('ciri.png');
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  margin: 30px 10px;
+  box-shadow: 2px 2px 10px black;
+}
+
+
+.new-list-btn{
+  position: fixed;
+  top: 15px;
+  right: 10px;
+  border-radius: 9px;
+}
+.new-list-btn a{
+  color: white;
+}
+
+.navbar {
+  height: 80px;
+  widows: 100vw;
+  position: fixed;
+  top: 0px;
+}
+
+.avatar {
+  position: fixed;
+  background-image: asset-url('Avatar.png');
+  height: 50px;
+  width: 50px;
+  border-radius: 2px;
+}
+
+.title-text {
+  background-color: rgba(0,0,0,0.1);
+  border-radius: 5px;
+  padding: 10px;
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translate(-50%, -50%); //centers the div
+  text-align: center;
+}
+
+
+

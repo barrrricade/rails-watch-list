@@ -27,6 +27,12 @@ class ListsController < ApplicationController
     end
   end
 
+   def destroy
+    @list.destroy
+    # @bookmark.list = @list
+    redirect_to lists_path, notice: 'list was successfully destroyed.'
+  end
+
 
 
   private

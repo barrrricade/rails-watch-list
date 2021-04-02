@@ -1,10 +1,41 @@
-<div class="navbar"></div>
-<h1>Here's your list</h1>
-<div class="lists_banner"></div>
+<div class="index-container" style="">
+  <div class="lists_banner">
+    <div class="navbar">
+      <div class="avatar"></div>
+      <button type="button" class="btn btn-success new-list-btn">
+        <h6>  <%= link_to "new list" , new_list_path  %></h6>
+      </button>
 
-<% @lists.each_with_index do |l, i| %>
-<h2> <%= "#{i+1}. " %><%= link_to l.name , list_path(l)  %></h2>
+    </div>
 
-<% end %>
-<br><br>
-<h3>  <%= link_to "new list" , new_list_path  %></h3>
+    <div class="title-text">
+        <h1>Yattsu Ko Ryuu</h1>
+        <h2>Movie Lists:</h2>
+    </div>
+
+  </div>
+
+  <div class="card-container">
+
+
+      <% @lists.each_with_index do |l, i| %>
+        <div class="card">
+          <h2> <%= "#{i+1}. " %><%= link_to l.name , list_path(l)  %></h2>
+          <div class="destroy-list">
+            <p>
+              <%= link_to "delete", list_path(l), method: :delete  %>
+            </p>
+          </div>
+        </div>
+      <% end %>
+      <br>
+  </div>
+
+
+  <div class="footer">
+    <h4>
+      🔥Hatered🔥  🖤Passion🖤  💎Pride💎
+    </h4>
+  </div>
+
+</div>

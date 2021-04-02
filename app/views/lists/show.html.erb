@@ -1,14 +1,48 @@
-<h1>Showing a list</h1>
-<h2>
+
+<div class="show-banner">
+  <div class="show-title">
+    <h1><%= @list.name %></h1>
+  </div>
+  <div class="avatar-box">
+    <div class="avatar avatar-show"></div>
+  </div>
+
+  <button type="button" class="btn btn-primary go-home-btn"><%= link_to "Return Home", lists_path %></button>
+  <button type="button" class="btn btn-success new-bookmark-btn"><%= link_to "new bookmark" , new_list_bookmark_path(@list)  %></button>
+
+</div>
+<div class="container show-container">
+
+
   <% @list.movies.each do |movie| %>
-    <h3><%= @list.name %></h3>
-    <p> <%= movie.title %> </p>
-    <br>
-    <p><%= link_to "Delete bookmark", bookmark_path(Bookmark.find_by(movie: movie, list: @list)), method: :delete %></p>
+    <div class="show-card">
+      <h2 class="movie-title">
+        <%= movie.title %>
+      </h2>
+      <div class="movie-description">
+        <p> <%= movie.overview %> </p>
+        <!-- lists the -->
+        <p>  -<%= Bookmark.find_by(movie: movie, list: @list).comment %> </p>
+      </div>
+
+
+      <br>
+      <p><%= link_to "Delete bookmark", bookmark_path(Bookmark.find_by(movie: movie, list: @list)), method: :delete %></p>
+    </div>
   <% end %>
-</h2>
 
 
-<h4><%= link_to "create new bookmark", new_list_bookmark_path(@list) %></h4>
 
-<h4><%= link_to "Show all list", lists_path %></h4>
+  <div class="footer">
+    <h4>
+      🔥Hatered🔥  🖤Passion🖤  💎Pride💎
+    </h4>
+  </div>
+
+
+
+</div>
+
+
+
+
